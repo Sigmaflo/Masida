@@ -1,6 +1,6 @@
-FROM openjdk:17-ea-11-jdk-slim
+FROM openjdk:11-jdk
 
-ARG JAR_FILE=build/libs/backend-1.0-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/*.jar
 COPY ${JAR_FILE} app.jar
 
 ENV TZ=Asia/Seoul
