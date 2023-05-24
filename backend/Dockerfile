@@ -1,6 +1,5 @@
-FROM openjdk:11-jdk
-
-ARG JAR_FILE=build/libs/*.jar
+FROM adoptopenjdk/openjdk11:alpine-jre
+ARG JAR_FILE=build/libs/backend-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 
 ENV TZ=Asia/Seoul
